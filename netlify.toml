@@ -1,1 +1,3 @@
-netlify
+[build]
+  command = ""
+  publish = "./"
