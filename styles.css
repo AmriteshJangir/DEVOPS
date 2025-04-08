@@ -1,56 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
 }
 
 header {
-    background: #000000;
-    color: #ffffff;
-    padding: 10px 0;
+    background-color: #2e86de;
+    color: white;
+    padding: 40px 20px;
     text-align: center;
 }
 
-main {
-    padding: 20px;
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 40px;
+    max-width: 1100px;
+    margin: auto;
 }
 
-h1, h2 {
-    color: #35424a;
+.block {
+    padding: 35px;
+    border-radius: 15px;
+    color: white;
+    line-height: 1.6;
+}
+
+.intro {
+    background-color: #1abc9c;
+}
+
+.devops {
+    background-color: #2980b9;
+    /* New color: deep teal-blue */
+}
+
+.stages {
+    background-color: #e67e22;
+}
+
+.stage-box {
+    background-color: rgba(255, 255, 255, 0.15);
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.advantages {
+    background-color: #8e44ad;
+}
+
+.challenges {
+    background-color: #c0392b;
+}
+
+.details {
+    background-color: #16a085;
+}
+
+.image-block {
+    background-color: #34495e;
+    text-align: center;
+}
+
+.pipeline-img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1.8em;
+}
+
+h3 {
+    margin-bottom: 10px;
 }
 
 ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #e2e2e2;
-}
-
-button {
-    padding: 10px 15px;
-    background-color: #35424a;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
+    padding-left: 20px;
 }
 
 footer {
     text-align: center;
-    padding: 10px 0;
-    background: #35424a;
-    color: #ffffff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding: 20px;
+    background-color: #2e86de;
+    color: white;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .block {
+        padding: 25px;
+    }
 }
