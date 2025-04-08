@@ -1,47 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps Pipeline CI/CD </title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pipelining & DevOps</title>
+    <link rel="stylesheet" href="ca.css" />
 </head>
+
 <body>
+
     <header>
-        <h>DevOps Pipeline CI/CD for automation</h>
-        <p>Welcome to our website, where we explore the world of DevOps pipeline automation and continuous integration/continuous deployment (CI/CD).</p>
+        <h1>Pipelining in Computer Architecture</h1>
+        <p>Understanding the step-by-step flow of instructions</p>
     </header>
-    <main>
-        <section id="problem-statement">
+
+    <div class="container">
+
+        <div class="block intro">
+            <h2>What is Pipelining?</h2>
+            <p>
+                Pipelining is a technique in computer architecture where multiple instructions are overlapped during
+                execution.
+                It is similar to an assembly line where each instruction is broken into separate steps and processed in
+                parallel.
+            </p>
+        </div>
+
+        <div class="block devops">
             <h2>Problem Statement</h2>
-            <p>Modern software development demands rapid, reliable, and repeatable delivery of code changes into production. However, many small teams and students face significant constraints due to limited resources, infrastructure, and budget. The challenge is to create a cost-effective and lightweight DevOps pipeline that embodies industry-standard practices without relying on extensive tooling or complex setups.</p>
-        </section>
-        <section id="key-challenges">
+            <p>
+                Modern software development demands rapid, reliable, and repeatable delivery of code changes into
+                production.
+                However, many small teams and students face significant constraints due to limited resources,
+                infrastructure, and budget.
+                The challenge is to create a cost-effective and lightweight DevOps pipeline that embodies
+                industry-standard practices
+                without relying on extensive tooling or complex setups.
+            </p>
+
             <h2>Key Challenges</h2>
             <ul>
-                <li><strong>Automated Integration and Deployment:</strong> Ensuring that code changes are seamlessly integrated and deployed with minimal manual intervention.</li>
-                <li><strong>Resource Constraints:</strong> Implementing a solution that is efficient and leverages free-tier services, making it accessible for educational purposes and small-scale projects.</li>
-                <li><strong>Security and Reproducibility:</strong> Managing sensitive credentials securely while maintaining a reproducible and maintainable deployment process.</li>
-                <li><strong>Simplicity and Impact:</strong> Developing a demonstrative project that clearly illustrates the core principles of continuous integration and continuous deployment (CI/CD) in a straightforward and impactful manner.</li>
+                <li><strong>Automated Integration and Deployment:</strong> Seamless code integration and deployment with
+                    minimal manual work.</li>
+                <li><strong>Resource Constraints:</strong> Efficient and accessible for small teams using free-tier
+                    services.</li>
+                <li><strong>Security and Reproducibility:</strong> Securely manage credentials while keeping the process
+                    reproducible.</li>
+                <li><strong>Simplicity and Impact:</strong> Clear demonstration of CI/CD principles in a simple and
+                    effective setup.</li>
             </ul>
-        </section>
-        <section id="project-goals">
+
             <h2>Project Goals</h2>
             <ul>
-                <li><strong>Establish an End-to-End CI/CD Pipeline:</strong> Integrate version control, automated testing, and deployment into a unified workflow.</li>
-                <li><strong>Leverage Cloud Services:</strong> Use cost-effective, free-tier cloud services to host and deploy the project, ensuring scalability and reliability.</li>
-                <li><strong>Ensure Secure and Automated Operations:</strong> Implement secure management of deployment credentials and secrets to mimic real-world DevOps practices.</li>
-                <li><strong>Demonstrate Practical DevOps Principles:</strong> Provide a concrete example of how automated pipelines accelerate development cycles, reduce manual errors, and enhance overall software quality.</li>
+                <li>Establish an End-to-End CI/CD Pipeline: Integrate version control, testing, and deployment.</li>
+                <li>Leverage Cloud Services: Use free-tier cloud tools for deployment and hosting.</li>
+                <li>Ensure Secure and Automated Operations: Handle secrets securely to mimic real-world DevOps.</li>
+                <li>Demonstrate Practical DevOps Principles: Show how automation enhances development cycles.</li>
             </ul>
-        </section>
-        <section id="project-aim">
+
             <h2>Project Aim</h2>
-            <p>This project aims to address these challenges by designing and implementing a fully automated, secure, and efficient deployment pipeline that serves as a practical demonstration of modern DevOps methodologies.</p>
-        </section>
-    </main>
+            <p>
+                This project aims to address these challenges by designing and implementing a fully automated, secure,
+                and efficient
+                deployment pipeline that serves as a practical demonstration of modern DevOps methodologies.
+            </p>
+        </div>
+        <div class="block stages">
+            <h2>Stages of a Pipeline</h2>
+
+            <div class="stage-box">
+                <h3>1. Instruction Fetch (IF)</h3>
+                <p>The processor fetches the instruction from memory based on the Program Counter (PC). This stage may
+                    involve accessing instruction cache or memory.</p>
+            </div>
+
+            <div class="stage-box">
+                <h3>2. Instruction Decode (ID)</h3>
+                <p>The instruction is decoded to determine the operation to be performed. Operands may also be read from
+                    the register file during this stage.</p>
+            </div>
+
+            <div class="stage-box">
+                <h3>3. Execute (EX)</h3>
+                <p>The ALU performs arithmetic/logical operations or address calculation required for the instruction.
+                </p>
+            </div>
+
+            <div class="stage-box">
+                <h3>4. Memory Access (MEM)</h3>
+                <p>This stage involves accessing memory if required (e.g., for load/store operations).</p>
+            </div>
+
+            <div class="stage-box">
+                <h3>5. Write Back (WB)</h3>
+                <p>The result is written back to the register file, completing the instruction cycle.</p>
+            </div>
+        </div>
+
+        <div class="block advantages">
+            <h2>Advantages of Pipelining</h2>
+            <ul>
+                <li>Improves instruction throughput</li>
+                <li>Efficient utilization of CPU resources</li>
+                <li>Faster instruction processing</li>
+            </ul>
+        </div>
+
+        <div class="block challenges">
+            <h2>Challenges in Pipelining</h2>
+            <ul>
+                <li><strong>Data Hazards:</strong> Dependency between instructions</li>
+                <li><strong>Control Hazards:</strong> Branch instructions altering flow</li>
+                <li><strong>Structural Hazards:</strong> Hardware resource conflicts</li>
+            </ul>
+        </div>
+
+        <div class="block details">
+            <h2>Detailed Concepts</h2>
+            <ul>
+                <li><strong>Pipeline Depth:</strong> Number of stages in the pipeline</li>
+                <li><strong>Latency vs Throughput:</strong> Pipelining increases throughput, not latency</li>
+                <li><strong>Pipeline Registers:</strong> Buffers between stages holding intermediate results</li>
+                <li><strong>Pipeline Flush:</strong> Clearing instructions due to mispredictions or exceptions</li>
+                <li><strong>Superpipelining:</strong> Dividing stages further for speed</li>
+                <li><strong>Superscalar Execution:</strong> Multiple pipelines working in parallel</li>
+            </ul>
+        </div>
+
+    </div>
+
     <footer>
-        <p>&copy; 2025 @ Demo Amritesh Jangir and Rohit Sharma</p>
+        &copy; 2025 CPU Concepts | Pipelining & DevOps Tutorial
     </footer>
-    <script src="script.js"></script>
+
 </body>
+
 </html>
