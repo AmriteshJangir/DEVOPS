@@ -1,0 +1,10 @@
+gh api \
+  -X PUT \
+  -H "Accept: application/vnd.github+json" \
+  /repos/OWNER/REPO/branches/main/protection \
+  -f required_status_checks='null' \
+  -f enforce_admins=true \
+  -f required_pull_request_reviews.dismiss_stale_reviews=true \
+  -f required_pull_request_reviews.required_approving_review_count=1 \
+  -F restrictions.users[]='OWNER' \
+  -F restrictions.users[]='END_USER'
