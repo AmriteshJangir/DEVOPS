@@ -1,0 +1,38 @@
+# 🔒 Security Policy
+
+## Supported Versions
+
+We are actively maintaining and securing the following versions:
+
+| Version | Supported          |
+|---------|--------------------|
+| Latest  | ✅ Actively supported |
+| Older   | ❌ Not maintained     |
+
+## 🛡️ Reporting a Vulnerability
+
+If you discover a security vulnerability in this repository, **do not create a public issue**.
+
+Instead, please follow these steps:
+
+1. Email us at: **rohitsharma89763@gmail.com**
+2. Include as much detail as possible:
+   - Type of issue (e.g., XSS, SQLi, logic flaw)
+   - How to reproduce it
+   - Potential impact
+   - Suggested fix (if any)
+
+We will respond within **72 hours** and will work with you on a responsible disclosure.
+
+## ✅ What You Can Expect
+
+- Acknowledgment of your report
+- Updates as we investigate
+- Credit for responsible disclosure (if desired)
+- Fixes deployed as quickly as possible
+
+## 🚫 Out of Scope
+
+- Social engineering
+- Denial of service (DoS)
+- Third-party services not maintained by us
