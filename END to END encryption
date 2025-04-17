@@ -1,10 +1,143 @@
-gh api \
-  -X PUT \
-  -H "Accept: application/vnd.github+json" \
-  /repos/OWNER/REPO/branches/main/protection \
-  -f required_status_checks='null' \
-  -f enforce_admins=true \
-  -f required_pull_request_reviews.dismiss_stale_reviews=true \
-  -f required_pull_request_reviews.required_approving_review_count=1 \
-  -F restrictions.users[]='OWNER' \
-  -F restrictions.users[]='END_USER'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryption Management - GitHub Main Branch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+            background-color: #333;
+            color: white;
+            font-size: 16px;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border: 2px solid #2575fc;
+            background-color: #444;
+        }
+
+        button {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+        }
+
+        p {
+            font-size: 14px;
+            color: #ddd;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .result {
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #333;
+            border-radius: 5px;
+            color: #fff;
+            word-wrap: break-word;
+        }
+    </style>
+    <script>
+        // Function to encrypt the key and update the UI with the result
+        async function encryptKey() {
+            const accessKey = document.getElementById('access_key').value;
+            const response = await fetch('/encrypt', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: new URLSearchParams({ access_key: accessKey })
+            });
+
+            const data = await response.json();
+            if (response.ok) {
+                document.getElementById('encrypted_key').textContent = data.encrypted_access_key;
+            } else {
+                alert('Error: ' + data.error);
+            }
+        }
+
+        // Function to decrypt the key and update the UI with the result
+        async function decryptKey() {
+            const encryptedKey = document.getElementById('encrypted_access_key').value;
+            const response = await fetch('/decrypt', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: new URLSearchParams({ encrypted_access_key: encryptedKey })
+            });
+
+            const data = await response.json();
+            if (response.ok) {
+                document.getElementById('decrypted_key').textContent = data.decrypted_access_key;
+            } else {
+                alert('Error: ' + data.error);
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Manage Encryption for GitHub Main Branch</h1>
+
+        <!-- Encryption Section -->
+        <h2>Encrypt Access Key</h2>
+        <input type="text" id="access_key" class="input-field" placeholder="Enter Access Key" />
+        <button onclick="encryptKey()">Encrypt</button>
+        <p><strong>Encrypted Key:</strong> <span id="encrypted_key" class="result"></span></p>
+
+        <!-- Decryption Section -->
+        <h2>Decrypt Access Key</h2>
+        <input type="text" id="encrypted_access_key" class="input-field" placeholder="Enter Encrypted Key" />
+        <button onclick="decryptKey()">Decrypt</button>
+        <p><strong>Decrypted Key:</strong> <span id="decrypted_key" class="result"></span></p>
+    </div>
+
+</body>
+</html>
