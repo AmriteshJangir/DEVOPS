@@ -1,3 +1,5 @@
+#script accessed only by the user device once we provide the access
+
 gh api \
   -X PUT \
   -H "Accept: application/vnd.github+json" \
