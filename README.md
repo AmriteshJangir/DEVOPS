@@ -1,3 +1,5 @@
+IntelliOps
+
 # DevOps CI/CD Pipeline Project
 
 This project shows a basic automated deployment pipeline using GitHub Actions and Netlify for static sites.
