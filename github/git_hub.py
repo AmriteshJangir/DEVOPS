@@ -3,14 +3,18 @@ import boto3
 from botocore.exceptions import NoCredentialsError, PartialCredentialsError
 import os
 app = Flask(__name__)
+
 # Initialize the KMS client
 kms_client = boto3.client('kms', region_name='us-east-1')  # Specify your AWS region
-key_id = "your-kms-key-id"  # Replace with your AWS KMS Key ID
+key_id = "your-kms-key-id"  
+
+# Replace with your AWS KMS Key ID
 # GitHub token for authentication (optional - here, just for demonstration)
 GITHUB_TOKEN = os.getenv('GITHUB_TOKEN')  # If needed, you can use this for GitHub API interaction
 @app.route('/')
 def index():
     return render_template('index.html')
+    
 # Encrypt Route
 @app.route('/encrypt', methods=['POST'])
 def encrypt_key():
