@@ -4,9 +4,6 @@ git add .github/SECURITY.md
 git commit -m "Add SECURITY.md for responsible disclosure"
 git push origin main
 
-//
-//
-
 #version control and kms for encryption and decryption
 {
   "Version": "2012-10-17",
