@@ -1,9 +1,11 @@
 #!/bin/bash
 # === CONFIGURATION ===
+
 OWNER="your-github-username"
 REPO="your-repo-name"
 END_USER="collaborator-username"
 # === PROTECT MAIN BRANCH ===
+
 gh api \
   -X PUT \
   -H "Accept: application/vnd.github+json" \
@@ -17,6 +19,7 @@ gh api \
   -f required_status_checks.contexts[]=ci \
   -f allow_force_pushes=false \
   -f allow_deletions=false
+  
 # === GRANT READ-ONLY ACCESS TO EVERYONE ELSE (OPTIONAL) ===
 # You can add other users with pull access only (suggest-only)
 # Example:
