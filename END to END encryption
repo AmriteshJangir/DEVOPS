@@ -125,6 +125,7 @@
 
     <div class="container">
         <h1>Manage Encryption for GitHub Main Branch</h1>
+        <h2>merge the encrypted data to main branch</h2>
 
         <!-- Encryption Section -->
         <h2>Encrypt Access Key</h2>
