@@ -10,7 +10,7 @@ This project shows a basic automated deployment pipeline using GitHub Actions an
 - Netlify CLI deploys the site using secrets
 
 
-
+/////
 
 DevOps CI/CD Pipeline Project
 This project demonstrates a fully automated CI/CD pipeline designed for seamless deployment of static websites using GitHub Actions and Netlify.
@@ -26,6 +26,7 @@ Automated Build & Deployment – The workflow integrates with the Netlify CLI, u
 Live Site Update – The updated static site is deployed to Netlify within seconds, ensuring rapid feedback and continuous delivery.
 
 🚀 Key Highlights
+
 
 Implements a modern DevOps practice of continuous integration and continuous delivery (CI/CD).
 
