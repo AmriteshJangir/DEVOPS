@@ -22,10 +22,9 @@ CI/CD Workflow Trigger – A GitHub Actions workflow (deploy.yml) is automatical
 Automated Build & Deployment – The workflow integrates with the Netlify CLI, using securely stored secrets and tokens to authenticate and deploy the latest build.
 
 Live Site Update – The updated static site is deployed to Netlify within seconds, ensuring rapid feedback and continuous delivery.
-
+....................
 🚀 Key Highlights
-
-
+....................
 Implements a modern DevOps practice of continuous integration and continuous delivery (CI/CD).
 
 Ensures automation, consistency, and reliability in deployments.
