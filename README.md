@@ -13,8 +13,9 @@ This project shows a basic automated deployment pipeline using GitHub Actions an
 DevOps CI/CD Pipeline Project
 This project demonstrates a fully automated CI/CD pipeline designed for seamless deployment of static websites using GitHub Actions and Netlify.
 
+..................
 🔧 How It Works
-
+..................
 Code Commit & Push – Developers push code changes to the GitHub repository.
 
 CI/CD Workflow Trigger – A GitHub Actions workflow (deploy.yml) is automatically triggered on each push to the main branch.
