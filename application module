@@ -1,0 +1,14 @@
+import { add, subtract } from "./utils/math";
+
+export default function App() {
+    const sum = add(5, 3);
+    const diff = subtract(10, 4);
+
+    return (
+        <div>
+            <h1>Build & Tokenization Demo</h1>
+            <p>Sum: {sum}</p>
+            <p>Difference: {diff}</p>
+        </div>
+    );
+}
