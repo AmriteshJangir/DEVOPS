@@ -1,0 +1,20 @@
+project-root/
+│
+├── frontend/
+│   ├── src/
+│   │   ├── index.js
+│   │   ├── app.js
+│   │   ├── utils/
+│   │   │   └── math.js
+│   │   └── styles/
+│   │       └── main.css
+│   │
+│   ├── public/
+│   │   └── index.html
+│   │
+│   └── build/              # Production output
+│
+├── node_modules/            # Third-party dependencies
+├── package.json
+├── webpack.config.js
+└── babel.config.json
