@@ -4,3 +4,9 @@
     "@babel/preset-react"
   ]
 }
+
+#==================#
+build/
+├── bundle.a92k3d.js
+├── bundle.a92k3d.js.map
+└── index.html
